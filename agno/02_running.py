@@ -29,3 +29,14 @@ from typing import Iterator
 from agno.agent import Agent, RunResponse
 from agno.models.google import Gemini
 from agno.utils.pprint import pprint_run_response
+
+agent = Agent(
+    model=Gemini(api_key=GEMINI_API_KEY,id="gemini-2.0-flash"),
+)
+
+response_stream: Iterator[RunResponse] = agent.run(
+    "Tell me a story on a donald duck",
+    stream = True
+)
+
+pprint_run_response(response_stream, markdown=True)
