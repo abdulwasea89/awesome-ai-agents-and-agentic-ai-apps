@@ -124,13 +124,13 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 1. **Clone the repository** 
 
     ```bash 
-    git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git 
+    git clone https://github.com/abdulwasea89/awesome_ai_agents_and_llm_apps.git
     ```
 
 2. **Navigate to the desired project directory**
 
     ```bash 
-    cd awesome-llm-apps/starter_ai_agents/ai_travel_agent
+    cd awesome_ai_agents_and_llm_apps/starter_ai_agents/ai_travel_agent
     ```
 
 3. **Install the required dependencies**
