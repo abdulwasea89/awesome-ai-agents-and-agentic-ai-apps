@@ -14,7 +14,7 @@ class Prompt:
     @staticmethod
     def system_prompt(tools_prompt:str,max_steps:int,instructions: list[str]=[]) -> str:
         width, height = pg.size()
-        template =PromptTemplate.from_file(files('windows_use.agent.prompt').joinpath('system.md'))
+        template = PromptTemplate.from_file(files('windows_use.agent.prompt').joinpath('system.md'))
         return template.format(**{
             'current_datetime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'instructions': '\n'.join(instructions),
