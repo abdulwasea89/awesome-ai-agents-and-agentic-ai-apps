@@ -17,4 +17,29 @@ The core of an Agent is the **Model, Tools and instructions, memory, knowledge, 
 
 ## Research agent
 
-Lets Build a research agent 		using Exa to showcase how to guide the Agent to produce the report in a specific format. In advanced cases, we should use [Structured Outputs](https://docs.agno.com/agents/structured-output) instead.
+Lets Build a research agent using Exa to showcase how to guide the Agent to produce the report in a specific format. In advanced cases, we should use [Structured Outputs](https://docs.agno.com/agents/structured-output) instead.
+
+### Explain the Agent: 
+
+
+This code creates a research agent using Agno that generates academic-style reports. Here's what it does:
+
+**Core Components:**
+
+* **Agent** : Uses OpenAI's GPT-4o model with ExaTools for web searching
+* **ExaTools** : Configured to search for content published today using keyword search
+* **Persona** : "Professor X-1000" - an AI research scientist with academic writing expertise
+
+**Key Features:**
+
+* **Structured Output** : Defines expected report format with sections like Executive Summary, Key Findings, etc.
+* **Research Process** : Instructions to run 3 distinct searches and cross-reference sources
+* **Academic Style** : Clear, authoritative writing with proper citations
+* **Markdown Output** : Formatted reports with show_tool_calls enabled
+
+**Configuration Options:**
+
+* `markdown=True`: Enables markdown formatting
+* `show_tool_calls=True`: Displays tool usage in responses
+* `add_datetime_to_instructions=True`: Adds timestamp context
+* `stream=True`: Enables streaming responses
