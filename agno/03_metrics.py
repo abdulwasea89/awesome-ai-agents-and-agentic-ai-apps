@@ -36,4 +36,8 @@ agent.print_response(
 if agent.run_response.messages:
     for message in agent.run_response.messages:
         if message.role == "assistant":
-            if message
+            if message.content:
+                print(f"Message: {message.content}")
+            elif message.tool_calls:
+                print(f"Tool Calls: {message.tool_calls}")
+            
