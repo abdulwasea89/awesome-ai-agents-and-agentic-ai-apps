@@ -65,7 +65,7 @@ async def deep_research(query: str, max_depth: int, time_limit: int, max_urls: i
         
         # Set up a callback for real-time updates
         def on_activity(activity):
-            st.write(f"[{activity['type']}] {activity['message']}")
+            st.write(f"[{activity['type']}] {activity['message']}") 
         
         # Run deep research
         with st.spinner("Performing deep research..."):
