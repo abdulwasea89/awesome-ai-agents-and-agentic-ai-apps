@@ -18,7 +18,7 @@
 import os
 from agno.agent import Agent
 from agno.models.google import Gemini
-from agno.memory.v2 import memory as Memory
+from agno.memory.v2.memory import memory as Memory
 from dotenv import load_dotenv
 
 load_dotenv()
