@@ -18,7 +18,7 @@
 import os
 from agno.agent import Agent
 from agno.models.google import Gemini
-from agno.memory.v2.memory import memory as Memory
+from agno.memory.v2 import Memory
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -67,3 +67,34 @@ agent.print_response(
     user_id=user_2_id,
     session_id=user_2_session_id,
 )
+
+
+# Fetch message from last N session
+
+
+import os
+from agno.agent import Agent
+from agno.storage.sqlite import SqliteStorage
+
+agent = Agent(
+    model = Gemini(api_key=GEMINI_API_KEY, id="gemini-2.0-flash"),
+    user_id = "user_1",
+    storage = SqliteStorage(table_name="agent_sessions_new", db_file="tmp/data.db"),
+    search_previous_sessions_history=True,  # allow searching previous sessions
+    num_history_sessions=2,  # only include the last 2 sessions in the search to avoid context length issues
+    show_tool_calls=True,
+)
+
+session_1_id = "session_1_id"
+session_2_id = "session_2_id"
+session_3_id = "session_3_id"
+session_4_id = "session_4_id"
+session_5_id = "session_5_id"
+
+agent.print_response("What is the capital of South Africa?", session_id=session_1_id)
+agent.print_response("What is the capital of China?", session_id=session_2_id)
+agent.print_response("What is the capital of France?", session_id=session_3_id)
+agent.print_response("What is the capital of Japan?", session_id=session_4_id)
+agent.print_response(
+    "What did I discuss in my previous conversations?", session_id=session_5_id
+)  
