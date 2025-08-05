@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: agno-docker
+Version: 0.0.1
+Summary: Docker resources for Agno
+Author-email: Ashpreet Bedi <ashpreet@agno.com>
+Project-URL: homepage, https://agno.com
+Project-URL: documentation, https://docs.agno.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: docker
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"

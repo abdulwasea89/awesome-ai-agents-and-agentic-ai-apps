@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: agno-aws
+Version: 0.0.2
+Summary: AWS resources for Agno
+Author-email: Ashpreet Bedi <ashpreet@agno.com>
+Project-URL: homepage, https://agno.com
+Project-URL: documentation, https://docs.agno.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: license-file
+
+# Agno AWS
+
+This is the Agno AWS library. It contains the code for the Agno AWS Resources.
+
