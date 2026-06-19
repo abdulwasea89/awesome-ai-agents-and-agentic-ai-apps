@@ -77,6 +77,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 *   [🐙 GitHub MCP Agent](mcp_ai_agents/github_mcp_agent/)
 *   [📑 Notion MCP Agent](mcp_ai_agents/notion_mcp_agent) 
 *   [🌍 AI Travel Planner MCP Agent](mcp_ai_agents/ai_travel_planner_mcp_agent_team)
+*   [📈 NotFair — SEO & Paid-Ads Agent Skills](https://github.com/nowork-studio/NotFair) — Open-source Claude Code plugin (~2.9k stars, MIT) with skills for SEO, Google Ads, and Meta Ads. Connects to Google Ads MCP, Meta Ads MCP, Google Search Console MCP, and Google Analytics (GA4) MCP.
 
 ### 📀 RAG (Retrieval Augmented Generation)
 *   [🔗 Agentic RAG](rag_tutorials/agentic_rag/)
